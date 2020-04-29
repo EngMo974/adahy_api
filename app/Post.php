@@ -10,5 +10,11 @@ class Post extends Model
         'title','content','date_written','image',
         'user_id','type_id'
     ];
+    public function users(){
+        return $this->belongsTo(User::class);
+    }
 
+    public function types(){
+        return $this->belongsTo(Type::class);
+    }
 }
