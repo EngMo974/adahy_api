@@ -9,11 +9,11 @@ class Type extends Model
    protected $fillable = ['type'];
 
     public function posts(){
-        return $this->belongsTo(Post::class);
+        return $this->hasOne(Post::class);
     }
 
     public function stores(){
-        return $this->belongsTo(Store::class);
+        return $this->hasOne(Store::class);
     }
 
 }

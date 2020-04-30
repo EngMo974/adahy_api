@@ -11,10 +11,10 @@ class Post extends Model
         'user_id','type_id'
     ];
     public function users(){
-        return $this->belongsTo(User::class);
+        return $this->hasOne(User::class);
     }
 
     public function types(){
-        return $this->belongsTo(Type::class);
+        return $this->hasOne(Type::class);
     }
 }

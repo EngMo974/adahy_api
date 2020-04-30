@@ -11,7 +11,7 @@ class Store extends Model
     ];
 
     public function users(){
-        return $this->belongsTo(User::class);
+        return $this->hasOne(User::class);
     }
 
     public function types(){
