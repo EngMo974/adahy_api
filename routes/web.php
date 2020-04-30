@@ -15,22 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/types', function () {
-
-    $type = \App\Type::find(2);
-    return $type->posts;
+    return \App\Type::all();
 });
 Route::get('/users', function () {
     return \App\User::all();
 });
 
 Route::get('/posts', function () {
-
     return \App\Post::all();
 });
 
 Route::get('/stores', function () {
-    $store = \App\Store::find(5);
-    return $store->users;
+    return \App\Store::all();
 });
 
 Route::get('/', function () {
